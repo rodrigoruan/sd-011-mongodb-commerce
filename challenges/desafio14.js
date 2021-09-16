@@ -1,0 +1,6 @@
+db.produtos.updateMany(
+  {
+    
+  },
+  {},
+);
