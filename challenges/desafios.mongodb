@@ -1,8 +1,8 @@
 use ('commerce');
 db.produtos.find();
-db.produtos.updateOne(
-  { tags: { $all: ["bovino", "pão"] } },
-  { $inc: { "vendasPorDia.6": 120 } },
+db.produtos.updateMany(
+  {},
+  { $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } },
 );
 
 // db.produtos.updateMany(
@@ -17,7 +17,7 @@ db.produtos.updateOne(
 
 db.produtos.find(
   {},
-  { nome: 1, vendasPorDia: 1, _id: 0 },
+  { nome: 1, valoresNutricionais: 1, _id: 0 },
 );
 
 // db.produtos.updateMany(
