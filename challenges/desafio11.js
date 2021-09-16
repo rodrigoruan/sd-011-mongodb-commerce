@@ -8,4 +8,30 @@ Para isso, escreva no arquivo desafio11.js duas queries, nesta ordem:
 2- Crie uma query que retorne o nome e tags de todos os documentos. 
 */
 
+// use("commerce");
+db.produtos.updateMany(
+  {},
+  {
+    $push: {
+      tags: {
+        $each: [
+          "combo",
+          "tasty", 
+        ],
+        $sort: 1,
+      },
+    },
+  },
+);
+
+// use("commerce");
+db.produtos.find(
+  {},
+  { 
+    _id: 0, 
+    nome: 1, 
+    tags: 1, 
+  },
+);
+
 //= ==========================================================================

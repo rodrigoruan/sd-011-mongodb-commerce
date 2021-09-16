@@ -8,4 +8,27 @@ Para isso, escreva no arquivo desafio12.js duas queries, nesta ordem:
 2- Crie uma query que retorne o nome e valoresNutricionais de todos os documentos. 
 */
 
+// use("commerce");
+db.produtos.updateMany(
+  {},
+  {
+    $push: { 
+      valoresNutricionais: { 
+        $each: [],
+        $sort: { percentual: -1 },
+      },
+    },
+  },
+);
+
+// use("commerce");
+db.produtos.find(
+  {},
+  {
+    _id: 0,
+    nome: 1,
+    valoresNutricionais: 1,
+  },
+);
+
 //= ==========================================================================
