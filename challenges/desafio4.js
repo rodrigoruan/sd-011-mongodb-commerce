@@ -5,5 +5,5 @@ db.produtos.updateMany(
 
 db.produtos.find(
   { ultimaModificacao: { $exists: true } },
-  { nome: 1, _id: 0, ultimaModificacao: 1 },
+  { nome: 1, _id: 0 },
 );
