@@ -1,7 +1,10 @@
-db.produtos.createIndex({ descricao: "text" }, { default_language: "portuguese" });
-
-db.produtos.count(
-  { $text: {
-    $search: "\"feito com\"",
+db.produtos.updateMany(
+  {},
+  { $rename: {
+    descricao: "descricaoSite",
   } },
 );
+
+db.produtos.find({}, {
+  nome: 1, descricao: 1, descricaoSite: 1, _id: 0,
+});
