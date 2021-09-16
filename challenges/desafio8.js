@@ -1,5 +1,5 @@
-db.produtos.updateMany({
-  name: "Quarteirão com Queijo",
+db.produtos.updateOne({
+  nome: "Quarteirão com Queijo",
 }, {
   $pop: {
     ingredientes: -1,
