@@ -1,9 +1,9 @@
-db.produtos.updateOne(
-    { nome: "Big Mac" },
-    { $set: { $currentDate: { ultimaModificacao: { $type: "date" } } } },
+db.produtos.updateMany(
+    { $nor: [
+        { nome: "McChicken" },
+        { ingredientes: "ketchup" },
+    ] },
+    { $push: { ingredientes: "ketchup" } },
 );
 
-db.produtos.find(
-    { ultimaModificacao: { $exists: true } },
-    { _id: 0, nome: 1 },
-);
+db.produtos.find({}, { _id: 0, nome: 1, ingredientes: 1 });
