@@ -12,6 +12,32 @@ Para isso, escreva no arquivo desafio3.js quatro queries, nesta ordem:
 4- Crie uma query que retorne o nome e avaliacao de todos os sanduíches.
 */
 
+// use("commerce");
+db.produtos.updateMany(
+  {},
+  { $set: { avaliacao: NumberInt("0") } },
+);
 
+// use("commerce");
+db.produtos.updateMany(
+  { tags: "bovino" },
+  { $inc: { avaliacao: 5 } },
+);
+
+// use("commerce");
+db.produtos.updateMany(
+  { tags: "ave" },
+  { $inc: { avaliacao: 3 } },
+);
+
+// use("commerce");
+db.produtos.find(
+  {},
+  {
+    _id: 0,
+    nome: 1,
+    avaliacao: 1,
+  },
+);
 
 //= ==========================================================================
