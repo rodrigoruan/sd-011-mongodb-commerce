@@ -1,8 +1,8 @@
 use ('commerce');
 db.produtos.find();
 db.produtos.updateOne(
-  { nome: "Quarteirão com Queijo" },
-  { $pop: { ingredientes: -1 } },
+  { tags: { $all: ["bovino", "pão"] } },
+  { $inc: { "vendasPorDia.6": 120 } },
 );
 
 // db.produtos.updateMany(
@@ -17,7 +17,7 @@ db.produtos.updateOne(
 
 db.produtos.find(
   {},
-  { nome: 1, ingredientes: 1, _id: 0 },
+  { nome: 1, vendasPorDia: 1, _id: 0 },
 );
 
 // db.produtos.updateMany(
