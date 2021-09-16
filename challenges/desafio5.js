@@ -1,6 +1,6 @@
 db.produtos.updateMany({
   nome: {
-    $not: { $gt: "McChicken" },
+    $ne: "McChicken",
   },
 }, {
   $push: {
