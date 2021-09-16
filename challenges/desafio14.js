@@ -6,7 +6,7 @@ db.produtos.updateMany(
     },
   },
   {
-    $push: {
+    $addToSet: {
       tags: "contém sódio",
     },
   },
