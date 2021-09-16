@@ -1,3 +1,5 @@
+// Rodolfo Rezende me ajudou nessa questão
+
 db.produtos.updateMany(
   { },
   { $set: { vendasPorDia: [0, 0, 0, 0, 0, 0, 0] } },
