@@ -6,7 +6,7 @@ db.produtos.updateMany(
         $each: ["combo", "tasty"],
         $sort: 1,
       },
-    }
+    },
   },
 );
 

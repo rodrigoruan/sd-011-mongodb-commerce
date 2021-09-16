@@ -3,7 +3,7 @@ db.produtos.updateOne(
   {
     $currentDate: {
       ultimaModificacao: { $type: "date" },
-    }
+    },
   },
 );
 

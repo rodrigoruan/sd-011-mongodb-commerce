@@ -5,12 +5,12 @@ db.produtos.updateMany(
         tipo: "sódio",
         percentual: { $gte: 40 },
       },
-    }
+    },
   },
   {
     $push: {
       tags: "muito sódio",
-    }
+    },
   },
 );
 

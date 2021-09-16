@@ -3,7 +3,7 @@ db.produtos.updateOne(
   {
     $pop: {
       ingredientes: 1,
-    }
+    },
   },
 );
 

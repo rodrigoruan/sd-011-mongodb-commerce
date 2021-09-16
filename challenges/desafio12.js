@@ -6,7 +6,7 @@ db.produtos.updateMany(
         $each: [],
         $sort: { percentual: -1 },
       },
-    }
+    },
   },
 );
 
