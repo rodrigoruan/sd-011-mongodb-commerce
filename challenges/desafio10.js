@@ -4,7 +4,8 @@ db.produtos.updateMany(
     vendasPorDia: {
       $each: [0, 0, 0, 0, 0, 0, 0],
     },
-    } }, 
+    }, 
+  }, 
 );
 
 db.produtos.updateOne(
