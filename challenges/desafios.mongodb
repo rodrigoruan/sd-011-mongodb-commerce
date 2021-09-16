@@ -1,4 +1,10 @@
 use ('commerce');
+
+db.produtos.createIndex(
+  { descricao: "text" },
+  { default_language: "portuguese" }
+);
+
 // db.produtos.find();
 // db.produtos.updateMany(
 //   { valoresNutricionais: { $elemMatch: { tipo: "sódio", percentual: { $gte: 20, $lt: 40 } } } },
@@ -31,5 +37,5 @@ use ('commerce');
 // )
 
 db.produtos.count(
-  { ingredientes: { $size: 4 } }
+  { $text: { $search: "\"feito com\"" } },
 );
