@@ -7,4 +7,4 @@ Para isso, escreva no arquivo desafio2.js duas queries, nesta ordem:
 
 2- Crie uma query que retorne o nome e valorUnitario de todos os produtos.
 */
-//===========================================================================
+// ===========================================================================

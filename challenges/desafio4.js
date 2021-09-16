@@ -8,4 +8,4 @@ Para isso, escreva no arquivo desafio4.js duas queries, nesta ordem:
 2- Crie uma query que retorne o nome de todos os documentos em que o campo ultimaModificacao existe.
 
 */
-//===========================================================================
+//= ==========================================================================

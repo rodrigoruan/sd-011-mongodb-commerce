@@ -8,4 +8,4 @@ Para isso, escreva no arquivo desafio17.js duas queries, nesta ordem:
 2- Crie uma query que retorne a quantidade de documentos que contêm as palavras frango ou hamburguer utilizando o operador $text. 
 */
 
-//===========================================================================
+//= ==========================================================================

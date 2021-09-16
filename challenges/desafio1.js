@@ -7,4 +7,18 @@ Para isso, escreva no arquivo desafio1.js duas queries, nesta ordem:
 
 2- Crie uma query que retorne o nome e criadoPor de todos os produtos.
 */
-//===========================================================================
+
+db.produtos.updateMany(
+  {},
+  { $set: { criadoPor: "Ronald McDonald" } },
+);
+
+db.produtos.find(
+  {},
+  { 
+    _id: 0,
+    criadoPor: 1,
+  },
+);
+
+//= ==========================================================================

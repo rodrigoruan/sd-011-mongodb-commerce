@@ -8,4 +8,4 @@ Para isso, escreva no arquivo desafio12.js duas queries, nesta ordem:
 2- Crie uma query que retorne o nome e valoresNutricionais de todos os documentos. 
 */
 
-//===========================================================================
+//= ==========================================================================

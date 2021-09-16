@@ -11,4 +11,4 @@ Para isso, escreva no arquivo desafio3.js quatro queries, nesta ordem:
 
 4- Crie uma query que retorne o nome e avaliacao de todos os sanduíches.
 */
-//===========================================================================
+//= ==========================================================================

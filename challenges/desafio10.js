@@ -13,4 +13,4 @@ Para isso, escreva no arquivo desafio10.js quatro queries, nesta ordem:
 
 4- Crie uma query que retorne o nome e vendasPorDia de todos os documentos. */
 
-//===========================================================================
+//= ==========================================================================

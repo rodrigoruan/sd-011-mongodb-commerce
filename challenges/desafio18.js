@@ -8,4 +8,4 @@ Para isso, escreva no arquivo desafio18.js duas queries, nesta ordem:
 2- Crie uma query que retorne a quantidade de documentos que contêm a expressão feito com utilizando o operador $text. 
 */
 
-//===========================================================================
+//= ==========================================================================
