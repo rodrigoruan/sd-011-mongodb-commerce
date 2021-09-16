@@ -7,6 +7,6 @@ Dica: mesmo sem adicionar nenhum novo elemento, para essa operação é necessá
 Crie uma query que retorne o nome e valoresNutricionais de todos os documentos. */
 db.produtos.updateMany(
   {},
-  { $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } }
+  { $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } },
 );
 db.produtos.find({}, { _id: 0, nome: 1, valoresNutricionais: 1 });
