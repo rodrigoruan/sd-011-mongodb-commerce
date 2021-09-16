@@ -1,4 +1,4 @@
-// Query 1 - Adicionar valorUnitário nos campos que não existem
+// Query 1 - Adiciona valorUnitário nos campos que não existem
 db.produtos.updateMany(
   { valorUnitario: { $exists: false } },
   { $set: { valorUnitario: NumberDecimal("0.00") } },
