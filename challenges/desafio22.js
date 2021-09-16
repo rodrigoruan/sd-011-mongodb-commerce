@@ -1,1 +1,1 @@
-db.produtos.find({ vendidos: { $mod: [5, 0] } })
+db.produtos.find({ vendidos: { $mod: [5, 0] } });
