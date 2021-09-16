@@ -1,14 +1,11 @@
-db.produtos.updateMany({
-  nome: "Big Mac",
-}, {
-  $currentDate: {
-    ultimaModificacao: { $type: "timestamp" },
+db.produtos.updateMany({}, {
+  $set: {
+    criadoPor: "Ronald McDonald",
   },
 });
 
-db.produtos.find({
-  ultimaModificacao: { $exists: true },
-}, {
+db.produtos.find({}, {
   _id: 0,
   nome: 1,
+  criadoPor: 1,
 });

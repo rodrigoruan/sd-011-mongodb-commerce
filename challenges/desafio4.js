@@ -1,15 +1,14 @@
-db.produtos.updateMany({}, {
-  $set: {
-    avaliacao: NumberInt(0),
-  },
-});
-
 db.produtos.updateMany({
-  tags: { $in: ["bovino"] },
+  nome: "Big Mac",
 }, {
-  $set: {
-    avaliacao: NumberInt(5),
+  $currentDate: {
+    ultimaModificacao: { $type: "timestamp" },
   },
 });
 
-db.produtos.find();
+db.produtos.find({
+  ultimaModificacao: { $exists: true },
+}, {
+  _id: 0,
+  nome: 1,
+});
