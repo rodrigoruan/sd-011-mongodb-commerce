@@ -15,7 +15,7 @@ db.produtos.updateMany({
 db.produtos.updateMany({
   ingredientes: {
     $elemMatch: {
-      $gt: "bovino",
+      $gte: "bovino",
       $gt: "pão",
     },
   },
