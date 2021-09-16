@@ -1,4 +1,3 @@
-// use('commerce');
 db.produtos.updateMany(
   { criadoPor: { $exists: false } },
   { $set: { criadoPor: "Ronald McDonald" } },
