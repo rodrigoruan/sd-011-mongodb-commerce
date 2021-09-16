@@ -7,4 +7,21 @@ Para isso, escreva no arquivo desafio2.js duas queries, nesta ordem:
 
 2- Crie uma query que retorne o nome e valorUnitario de todos os produtos.
 */
+
+// use('commerce');
+db.produtos.updateMany(
+  {},
+  { $set: { valorUnitario: NumberDecimal("0.00") } },
+);
+
+// use('commerce');
+db.produtos.find(
+  {},
+  {
+    _id: 0,
+    nome: 1,
+    valorUnitario: 1,
+  },
+);
+
 // ===========================================================================
