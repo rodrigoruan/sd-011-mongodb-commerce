@@ -1,12 +1,14 @@
 db.produtos.updateMany(
   {
-    "valoresNutricionais.tipo": "sódio",
-    "valoresNutricionais.percentual": {
-      $gte: 40,
+    $elemMatch: {
+      tipo: "sódio",
+      percentual: {
+        $gte: 40,
+      },
     },
   },
   {
-    $addToSet: {
+    $push: {
       tags: "muito sódio",
     },
   },
