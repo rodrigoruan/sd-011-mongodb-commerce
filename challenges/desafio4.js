@@ -1,4 +1,3 @@
-use("commerce");
 db.produtos.updateOne(
     { nome: "Big Mac" },
     { $set: { ultimaModificacao: new Date() } },
