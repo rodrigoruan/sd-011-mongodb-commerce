@@ -8,7 +8,7 @@ Crie uma query que incremente o valor do campo avaliacao em 5 em todos os sandu�
 Crie uma query que incremente o valor do campo avaliacao em 3 em todos os sanduíches de ave.
 
 Crie uma query que retorne o nome e avaliacao de todos os sanduíches. */
-db.produtos.updateMany({}, {$set: {avaliacao: NumberInt(0)}});
-db.produtos.updateMany({tags: {$all: ["bovino"]} }, {$inc: {avaliacao: +5}});
-db.produtos.updateMany({tags: {$all:["ave"]} }, {$inc: {avaliacao: +3}});
-db.produtos.find({}, {_id: 0, nome: 1, avaliacao: 1});
+db.produtos.updateMany({}, { $set: { avaliacao: NumberInt(0) } });
+db.produtos.updateMany({ tags: { $all: ["bovino"] } }, { $inc: { avaliacao: +5 } });
+db.produtos.updateMany({ tags: { $all: ["ave"] } }, { $inc: { avaliacao: +3 } });
+db.produtos.find({}, { _id: 0, nome: 1, avaliacao: 1 });

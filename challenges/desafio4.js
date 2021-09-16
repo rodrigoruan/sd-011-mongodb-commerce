@@ -5,5 +5,8 @@ Crie uma query que atribua a data corrente ao campo ultimaModificacao no sanduí
 
 Crie uma query que retorne o nome de todos os documentos em que o campo ultimaModificacao existe. */
 
-db.produtos.updateOne({nome: "Big Mac"}, {$currentDate: {ultimaModificacao: { $type: "date" }}});
-db.produtos.find({ultimaModificacao: {$exists: true}},{_id: 0, nome: 1});
+db.produtos.updateOne(
+  { nome: "Big Mac" },
+  { $currentDate: { ultimaModificacao: { $type: "date" } } },
+);
+db.produtos.find({ ultimaModificacao: { $exists: true } }, { _id: 0, nome: 1 });
