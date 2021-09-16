@@ -11,6 +11,35 @@ Para isso, escreva no arquivo desafio10.js quatro queries, nesta ordem:
 
 3- Crie uma query que incremente as vendas de todos os sanduíches de carne do tipo bovino e pão aos sábados em 120.
 
-4- Crie uma query que retorne o nome e vendasPorDia de todos os documentos. */
+4- Crie uma query que retorne o nome e vendasPorDia de todos os documentos. 
+*/
+
+// use("commerce");
+db.produtos.updateMany(
+  {},
+  { $set: { vendasPorDia: [0, 0, 0, 0, 0, 0, 0] } },
+);
+
+// use("commerce");
+db.produtos.updateOne(
+  { nome: "Big Mac" },
+  { $set: { "vendasPorDia.3": 60 } },
+);
+
+// use("commerce");
+db.produtos.updateMany(
+  { tags: { $in: ["bovino", "pao"] } },
+  { $set: { "vendasPorDia.6": 120 } },
+);
+
+// use("commerce");
+db.produtos.find(
+  {},
+  {
+    _id: 0,
+    nome: 1,
+    vendasPorDia: 1,
+  },
+);
 
 //= ==========================================================================
