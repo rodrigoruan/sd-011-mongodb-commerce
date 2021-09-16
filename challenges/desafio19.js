@@ -1,6 +1,6 @@
 // Crie uma query que faça a renomeação do campo descricao para descricaoSite em todos os documentos.
 db.produtos.updateMany(
-  { descricao: { $exists: true } },
+  {},
   { $rename: { descricao: "descricaoSite" } },
 );
 
