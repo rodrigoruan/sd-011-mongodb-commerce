@@ -13,12 +13,7 @@ db.produtos.updateMany({
 });
 
 db.produtos.updateMany({
-  ingredientes: {
-    $elemMatch: {
-      $gte: "bovino",
-      $gt: "pão",
-    },
-  },
+  tags: ["bovino", "pão"],
 }, {
   $set: {
     "vendasPorDia.6": 120,
