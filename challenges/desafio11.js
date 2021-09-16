@@ -1,5 +1,3 @@
-// use('commerce');
-
 db.produtos.updateMany(
   { },
   { $push: {
