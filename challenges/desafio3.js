@@ -1,5 +1,3 @@
-// use('commerce');
-
 db.produtos.updateMany(
   { avaliacao: { $exists: false } },
   { $set: { avaliacao: NumberInt(0) } },
