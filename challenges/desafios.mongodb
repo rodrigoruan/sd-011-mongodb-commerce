@@ -1,8 +1,8 @@
 use ('commerce');
 db.produtos.find();
 db.produtos.updateMany(
-  {},
-  { $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } },
+  { valoresNutricionais: { $elemMatch: { tipo: "sódio", percentual: { $gte: 20, $lt: 40 } } } },
+  { $push: { tags: "contém sódio" } },
 );
 
 // db.produtos.updateMany(
@@ -17,7 +17,7 @@ db.produtos.updateMany(
 
 db.produtos.find(
   {},
-  { nome: 1, valoresNutricionais: 1, _id: 0 },
+  { nome: 1, tags: 1, _id: 0 },
 );
 
 // db.produtos.updateMany(
