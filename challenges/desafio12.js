@@ -12,4 +12,4 @@ db.produtos.updateMany(
 );
 
 // Crie uma query que retorne o nome e valoresNutricionais de todos os documentos.
-db.produtos.find({}, { _id: 0, nome: 1, tags: 1 });
+db.produtos.find({}, { _id: 0, nome: 1, valoresNutricionais: 1 });
