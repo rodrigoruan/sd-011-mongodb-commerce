@@ -10,14 +10,26 @@ db.produtos.updateMany(
 
 // Query 2
 db.produtos.updateMany(
-  { tags: "bovino" },
-  { $inc: { avaliacao: 5 } },
+  {
+    tags: "bovino",
+  },
+  {
+    $inc: {
+      avaliacao: 5,
+    },
+  },
 );
 
 // Query 3
 db.produtos.updateMany(
-  { tags: "ave" },
-  { $inc: { avaliacao: 3 } },
+  {
+    tags: "ave",
+  },
+  {
+    $inc: {
+      avaliacao: 3,
+    },
+  },
 );
 
 // Query 4
