@@ -3,9 +3,9 @@ db.produtos.updateMany(
   {},
   {
     $push: {
-      tags: {
-        $each: ["combo", "tasty"],
-        $sort: 1,
+      valoresNutricionais: {
+        $each: [],
+        percentual: { $sort: -1 },
       },
     },
   },
