@@ -8,7 +8,7 @@ db.produtos.updateMany(
         $sort: 1,
       },
     },
-},
+  },
 );
 
 // Crie uma query que retorne o nome e tags de todos os documentos.
