@@ -3,4 +3,4 @@ db.produtos.updateMany(
 },
 );
 
-db.produtos.find({}, { _id: 0, nome: 1, ultimaModificacao: 1 });
+db.produtos.find({ ultimaModificacao: { $exists: true } }, { _id: 0, nome: 1 });
