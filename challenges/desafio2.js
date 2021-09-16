@@ -1,5 +1,4 @@
 db.produtos.updateMany(
-  { valorUnitario: { $exists: false } },
   { $set: { valorUnitario: 0.00 } },
 );
 
