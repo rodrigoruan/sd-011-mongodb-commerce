@@ -5,16 +5,16 @@ db.produtos.updateMany(
         tipo: "sódio",
         $and: [
           { percentual: { $gt: 20 } },
-          { percentual: { $lt: 40 } }
-        ]
-      }
-    }
+          { percentual: { $lt: 40 } },
+        ],
+      },
+    },
   },
   {
     $push: {
-      tags: "contém sódio"
-    }
-  }
+      tags: "contém sódio",
+    },
+  },
 );
 
 db.produtos.find(
@@ -23,5 +23,5 @@ db.produtos.find(
     _id: 0,
     nome: 1,
     tags: 1,
-  }
+  },
 );

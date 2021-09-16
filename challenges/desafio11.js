@@ -5,12 +5,12 @@ db.produtos.updateMany(
       tags: {
         $each: [
           "combo",
-          "tasty"
+          "tasty",
         ],
-        $sort: 1
-      }
-    }
-  }
+        $sort: 1,
+      },
+    },
+  },
 );
 
 db.produtos.find(
@@ -19,5 +19,5 @@ db.produtos.find(
     _id: 0,
     nome: 1,
     tags: 1,
-  }
+  },
 );
