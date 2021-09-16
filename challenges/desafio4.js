@@ -17,4 +17,8 @@ db.produtos.find(
       $exists: true,
     },
   },
+  { 
+    _id: 0,
+    nome: 1,
+  },
 );
