@@ -1,6 +1,6 @@
 db.produtos.updateMany({}, {
   $push: {
-    ingredientes: {
+    tags: {
       $each: ["combo", "tasty"],
     },
   },
