@@ -7,4 +7,4 @@ db.produtos.updateOne(
 );
 
 // Crie uma query que retorne o nome e curtidas de todos os documentos.
-db.produtos.find({}, { _id: 0, nome: 1, curtidas: 1 })
+db.produtos.find({}, { _id: 0, nome: 1, curtidas: 1 });
