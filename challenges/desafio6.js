@@ -1,6 +1,6 @@
 db.produtos.updateMany({
   nome: {
-    $in: ["McChicken", "Big Mac", "Quarteirão com Queijo"],
+    $in: ["Big Mac", "Quarteirão com Queijo"],
   },
 }, {
   $addToSet: {
