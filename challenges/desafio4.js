@@ -7,7 +7,7 @@
 
 db.produtos.updateMany(
   { nome: "Big Mac" },
-  { $currentDate: { ultimaModificacao: true } }
+  { $currentDate: { ultimaModificacao: true } },
 );
 
 // Crie uma query que incremente o valor do campo avaliacao em 3 em todos os sanduíches de ave.
@@ -16,6 +16,6 @@ db.produtos.find(
   { ultimaModificacao: { $exists: true } },
   {
     _id: 0,
-    nome: 1
-  }
+    nome: 1,
+  },
 );
