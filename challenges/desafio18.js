@@ -6,6 +6,6 @@ db.produtos.createIndex({
 
 db.produtos.find({
   $text: {
-    $search: "frango hamburguer",
+    $search: "feito com",
   },
 }).count();
