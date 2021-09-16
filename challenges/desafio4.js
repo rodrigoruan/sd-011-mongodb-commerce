@@ -7,5 +7,5 @@ db.produtos.updateOne(
 
 db.produtos.findOne(
   { ultimaModificacao: { $exists: true } },
-  { nome: 1, ultimaModificacao: 1, _id: 0 },
+  { nome: 1, _id: 0 },
 );
