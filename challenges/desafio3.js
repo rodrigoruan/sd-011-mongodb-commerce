@@ -16,7 +16,7 @@ db.produtos.updateMany(
 
 // Query 3
 db.produtos.updateMany(
-  { tagas: "ave" },
+  { tags: "ave" },
   { $inc: { avaliacao: 3 } },
 );
 
