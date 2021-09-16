@@ -2,7 +2,7 @@ db.produtos.updateMany(
   {},
   {
     $set: {
-      "criadoPor": "Ronald McDonald",
+      criadoPor: "Ronald McDonald",
     },
   },
 );
