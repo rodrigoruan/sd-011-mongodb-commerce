@@ -1,4 +1,4 @@
-// use('commerce');
+// Rodolfo Rezende da turma 11 me ajudou no $addToSet
 
 db.produtos.updateMany(
   { nome: { $ne: "McChicken" } },
