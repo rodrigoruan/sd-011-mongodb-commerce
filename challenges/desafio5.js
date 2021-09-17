@@ -1,9 +1,9 @@
-db.produtos.updateMany(
+db.produtos.updateOne(
   { nome: { $ne: "McChicken" } },
   { $addToSet: { ingredientes: "Ketchup" } },
 );
 
-// db.produtos.updateMany(
+// db.produtos.updateOne(
 //   { nome: { $not: { $eq: "McChicken" } } },
 //   { $push: { ingredientes: { $each: ["Ketchup"] } } },
 //   { upsert: true },
