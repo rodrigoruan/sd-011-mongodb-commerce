@@ -1,4 +1,4 @@
-// Query 12 - Ordena os elementos do array valoresNutricionais pelo campo percentual de forma descendente - Uso do each
+// Query 12 - Ordena os elementos do array valoresNutricionais pelo campo percentual de forma descendente - Uso do each para sort funcionar
 db.produtos.updateMany(
     {}, 
     { $push: { valoresNutricionais: 
