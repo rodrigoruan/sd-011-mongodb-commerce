@@ -1,6 +1,6 @@
 db.produtos.updateMany(
   { "valoresNutricionais.2.percentual": { $gte: 40 } },
-  { $push: { tags: "contém sódio" } },
+  { $push: { tags: "muito sódio" } },
 );
 
 db.produtos.find(
