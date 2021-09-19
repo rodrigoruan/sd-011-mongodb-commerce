@@ -1,1 +1,1 @@
-db.produtos.find({"nome": /Mc/i}).count()
+db.produtos.find({ "nome": /Mc/i }).count();
