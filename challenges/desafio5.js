@@ -3,4 +3,4 @@ db.produtos.updateMany(
     { $addToSet: { ingredients: { $each: ["ketchup"] } } },
 );
 
-db.produtos.find({}, { _id: false, nome: true, ingredients: true });
+db.produtos.find({}, { _id: false, nome: true, ingredientes: true });
