@@ -1,3 +1,3 @@
-db.produtos.update({ nome: "Big Mac" }, { $unset: { curtidas: 1 } });
+db.produtos.update({ nome: "Big Mac" }, { $unset: { curtidas: "" } });
 
-db.products.find({}, { _id: 0, name: 1, likes: 1 });
+db.produtos.find({}, { _id: 0, nome: 1, curtidas: 1 });
